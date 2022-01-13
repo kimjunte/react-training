@@ -4,7 +4,7 @@
 
 import MyClassComponent from "./components/MyClassComponent";
 import MyFunctionalComponent from "./components/MyFunctionalComponent";
-import MyForm from "./forms/Myform";
+import MyForm from "./forms/MyForm";
 import AsyncUpdateFunction from "./hooks/AsyncUpdateFunction";
 import LifecycleFunction from "./hooks/LifecycleFunction";
 import MutuableStateFunction from "./hooks/MutableStateFunction";
