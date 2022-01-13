@@ -4,6 +4,7 @@
 
 import MyClassComponent from "./components/MyClassComponent";
 import MyFunctionalComponent from "./components/MyFunctionalComponent";
+import MyForm from "./forms/Myform";
 import AsyncUpdateFunction from "./hooks/AsyncUpdateFunction";
 import LifecycleFunction from "./hooks/LifecycleFunction";
 import MutuableStateFunction from "./hooks/MutableStateFunction";
@@ -31,7 +32,8 @@ const App = () => {
       {/* <StatefulFunction/> */}
       {/* <MutuableStateFunction/> */}
       {/* <AsyncUpdateFunction/> */}
-      <LifecycleFunction/>
+      {/* <LifecycleFunction/> */}
+      <MyForm/>
     </>
   );
 
