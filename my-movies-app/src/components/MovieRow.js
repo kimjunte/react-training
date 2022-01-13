@@ -4,8 +4,8 @@ const MovieRow = props => {
     return (
         <tr>
             <td>{Title}</td>
-            <td>{Poster}</td>
             <td>{Year}</td>
+            <td><a href={Poster}>Poster</a></td>
         </tr>
     );
 }
