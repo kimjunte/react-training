@@ -3,15 +3,19 @@ import MovieRow from "./MovieRow";
 
 const MovieTable = props => {
     const {movies} = props;
-    console.log(movies);
     return (
-        <table>
-            <MovieHeader/>
-            <tbody>
-                {movies.map(movie => <MovieRow movie={movie}/>)}
-            </tbody>
-        </table>
-
+        <div className="d-flex flex-wrap justify-content-center">
+            {movies.map(({Poster, imdbID}) => {
+               return (
+                    <img 
+                        key={imdbID} 
+                        src={Poster} 
+                        className="p-4" 
+                        onClick={() => console.log(imdbID)}
+                    />
+                );
+            })}
+        </div>
     );
 }
 

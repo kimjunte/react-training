@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Movies from './components/Movies';
 import MoviesFunctional from './components/MoviesFunctional';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const App = () => {
   return (

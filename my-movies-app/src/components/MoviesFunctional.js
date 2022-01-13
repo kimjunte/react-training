@@ -14,7 +14,16 @@ const MoviesFunctional = props => {
         if (searchTerm) {
             fetch(`https://www.omdbapi.com/?apikey=fa9f0d49&s=${searchTerm}`)
                 .then(response => response.json())
-                .then(data => setMovies(data.Search))
+                .then(data => {
+                    console.log(data);
+                    if (data.Search) {
+                        setMovies(data.Search)
+                    }
+                    else {
+                        //TODO: Show message to user that nothing was found
+                        console.log("SHOW MESSAGE TO USER");
+                    }
+                })
                 .catch(error => console.log(error)); // <!-- we could assign the error to some state to render
         }
     }, [searchTerm]);
