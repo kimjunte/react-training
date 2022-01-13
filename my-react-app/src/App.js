@@ -4,6 +4,10 @@
 
 import MyClassComponent from "./components/MyClassComponent";
 import MyFunctionalComponent from "./components/MyFunctionalComponent";
+import AsyncUpdateFunction from "./hooks/AsyncUpdateFunction";
+import LifecycleFunction from "./hooks/LifecycleFunction";
+import MutuableStateFunction from "./hooks/MutableStateFunction";
+import StatefulFunction from "./hooks/StatefulFunction";
 import Bio from "./jsx/Bio";
 import Lifecycle from "./lifecycle/Lifecycle";
 import Clock from "./state/Clock";
@@ -23,7 +27,11 @@ const App = () => {
       {/* <Clock/> */}
       {/* <Counter/> */}
       {/* <MutuableState/> */}
-      <Lifecycle/>
+      {/* <Lifecycle/> */}
+      {/* <StatefulFunction/> */}
+      {/* <MutuableStateFunction/> */}
+      {/* <AsyncUpdateFunction/> */}
+      <LifecycleFunction/>
     </>
   );
 
