@@ -1,5 +1,4 @@
 const MovieSearchForm = ({onNewSearchTerm}) => {
-    console.log(onNewSearchTerm);
 
     const handleSearch = () => {
         // ultimately we must read the search term from the text box
