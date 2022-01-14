@@ -11,6 +11,7 @@ import MutuableStateFunction from "./hooks/MutableStateFunction";
 import StatefulFunction from "./hooks/StatefulFunction";
 import Bio from "./jsx/Bio";
 import Lifecycle from "./lifecycle/Lifecycle";
+import Routing from "./routing/Routing";
 import Clock from "./state/Clock";
 import Counter from "./state/Counter";
 import MutuableState from "./state/MutableState";
@@ -33,7 +34,8 @@ const App = () => {
       {/* <MutuableStateFunction/> */}
       {/* <AsyncUpdateFunction/> */}
       {/* <LifecycleFunction/> */}
-      <MyForm/>
+      {/* <MyForm/> */}
+      <Routing/>
     </>
   );
 
