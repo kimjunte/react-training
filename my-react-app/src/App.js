@@ -13,10 +13,13 @@ import ReducerFunctionV2 from "./hooks/ReducerFunctionV2";
 import StatefulFunction from "./hooks/StatefulFunction";
 import Bio from "./jsx/Bio";
 import Lifecycle from "./lifecycle/Lifecycle";
+import ReduxCounter from "./redux/ReduxCounter";
 import Routing from "./routing/Routing";
 import Clock from "./state/Clock";
 import Counter from "./state/Counter";
 import MutuableState from "./state/MutableState";
+import {store} from "./redux/Redux"
+import {Provider} from "react-redux"
 
 // BTW a function that returns JSX is a component
 const App = () => {
@@ -24,7 +27,7 @@ const App = () => {
   // the return value looks like HTML but is in fact JSX (JavaScript)
   return (
     <>
-      <h1>My React App</h1>
+      {/* <h1>My React App</h1> */}
       {/* <Bio /> */}
       {/* <MyFunctionalComponent name="Harry Potter" author="JK Rowling"/> */}
       {/* <MyClassComponent name="The Twits" author="Roald Dahl"/> */}
@@ -39,7 +42,10 @@ const App = () => {
       {/* <MyForm/> */}
       {/* <Routing/> */}
       {/* < Context /> */}
-      <ReducerFunctionV2/>
+      {/* <ReducerFunctionV2/> */}
+      <Provider store={store}>
+        <ReduxCounter/>
+      </Provider>
     </>
   );
 
