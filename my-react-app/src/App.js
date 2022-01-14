@@ -9,6 +9,7 @@ import AsyncUpdateFunction from "./hooks/AsyncUpdateFunction";
 import Context from "./hooks/Context";
 import LifecycleFunction from "./hooks/LifecycleFunction";
 import MutuableStateFunction from "./hooks/MutableStateFunction";
+import ReducerFunctionV2 from "./hooks/ReducerFunctionV2";
 import StatefulFunction from "./hooks/StatefulFunction";
 import Bio from "./jsx/Bio";
 import Lifecycle from "./lifecycle/Lifecycle";
@@ -37,7 +38,8 @@ const App = () => {
       {/* <LifecycleFunction/> */}
       {/* <MyForm/> */}
       {/* <Routing/> */}
-      < Context />
+      {/* < Context /> */}
+      <ReducerFunctionV2/>
     </>
   );
 
