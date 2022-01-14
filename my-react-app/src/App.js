@@ -6,6 +6,7 @@ import MyClassComponent from "./components/MyClassComponent";
 import MyFunctionalComponent from "./components/MyFunctionalComponent";
 import MyForm from "./forms/MyForm";
 import AsyncUpdateFunction from "./hooks/AsyncUpdateFunction";
+import Context from "./hooks/Context";
 import LifecycleFunction from "./hooks/LifecycleFunction";
 import MutuableStateFunction from "./hooks/MutableStateFunction";
 import StatefulFunction from "./hooks/StatefulFunction";
@@ -35,7 +36,8 @@ const App = () => {
       {/* <AsyncUpdateFunction/> */}
       {/* <LifecycleFunction/> */}
       {/* <MyForm/> */}
-      <Routing/>
+      {/* <Routing/> */}
+      < Context />
     </>
   );
 

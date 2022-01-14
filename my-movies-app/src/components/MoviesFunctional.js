@@ -5,6 +5,9 @@ import React from "react";
 import MovieForm from "./MovieForm";
 import MovieSearchForm from "./MovieSearchForm";
 import {useState, useEffect} from 'react'
+import MovieDetail from "./MovieDetail";
+import Login from "./Login";
+import {Routes, Route, Navigate} from 'react-router-dom'
 
 const MoviesFunctional = props => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -38,11 +41,21 @@ const MoviesFunctional = props => {
     }
 
     return (
-        <>
-            <MovieCounter movies={movies}/>
-            <MovieSearchForm onNewSearchTerm={handleNewSearchTerm}/>
-            {!!movies.length && <MovieTable movies={movies}/>}
-        </>
+            <Routes>
+                <Route path="/" element={<Navigate to="/login"/>} />
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/movies" element={
+                    <>
+                        <MovieCounter movies={movies}/>
+                        <MovieSearchForm onNewSearchTerm={handleNewSearchTerm}/>
+                        {/* !! => converts any value to a boolean; e.g. 0 to false */}
+                        {!!movies.length && <MovieTable movies={movies}/>}
+                        {/* <MovieReviewForm onNewReview={this.handleNewReview}/> */}
+                        <MovieForm addMovieHandler={handleNewMovie}/>    
+                    </>
+                } />
+                <Route path="/movies/:imdbID" element={<MovieDetail />} />
+            </Routes>
     );
 }
 

@@ -1,5 +1,6 @@
 import MovieHeader from "./MovieHeader";
 import MovieRow from "./MovieRow";
+import {Link} from 'react-router-dom';
 
 const MovieTable = props => {
     const {movies} = props;
@@ -7,12 +8,9 @@ const MovieTable = props => {
         <div className="d-flex flex-wrap justify-content-center">
             {movies.map(({Poster, imdbID}) => {
                return (
-                    <img 
-                        key={imdbID} 
-                        src={Poster} 
-                        className="p-4" 
-                        onClick={() => console.log(imdbID)}
-                    />
+                    <Link key={imdbID} to={`/movies/${imdbID}`}>
+                        <img src={Poster} className="p-4" />
+                    </Link>
                 );
             })}
         </div>

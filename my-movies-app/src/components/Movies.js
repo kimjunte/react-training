@@ -4,6 +4,8 @@ import MovieReviewForm from "./MovieReviewFrom";
 import React from "react";
 import MovieForm from "./MovieForm";
 import MovieSearchForm from "./MovieSearchForm";
+import MovieDetail from "./MovieDetail";
+import {Routes, Route, Navigate} from 'react-router-dom'
 
 // TODO: change data information from http://www.omdbapi.com/ API
 
@@ -63,14 +65,20 @@ class Movies extends React.Component {
 
     render () {
         return (
-            <>
-                <MovieCounter movies={this.state.movies}/>
-                <MovieSearchForm onNewSearchTerm={this.handleNewSearchTerm}/>
-                {/* !! => converts any value to a boolean; e.g. 0 to false */}
-                {!!this.state.movies.length && <MovieTable movies={this.state.movies}/>}
-                {/* <MovieReviewForm onNewReview={this.handleNewReview}/> */}
-                <MovieForm addMovieHandler={this.handleNewMovie}/>    
-            </>
+            <Routes>
+                <Route path="/" element={<Navigate to="/movies"/>} />
+                <Route exact path="/movies" element={
+                    <>
+                        <MovieCounter movies={this.state.movies}/>
+                        <MovieSearchForm onNewSearchTerm={this.handleNewSearchTerm}/>
+                        {/* !! => converts any value to a boolean; e.g. 0 to false */}
+                        {!!this.state.movies.length && <MovieTable movies={this.state.movies}/>}
+                        {/* <MovieReviewForm onNewReview={this.handleNewReview}/> */}
+                        <MovieForm addMovieHandler={this.handleNewMovie}/>    
+                    </>
+                } />
+                <Route path="/movies/:imdbID" element={<MovieDetail />} />
+            </Routes>
         );
     }
 }

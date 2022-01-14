@@ -4,12 +4,15 @@ import './App.css';
 import Movies from './components/Movies';
 import MoviesFunctional from './components/MoviesFunctional';
 import 'bootstrap/dist/css/bootstrap.css';
+import {BrowserRouter} from 'react-router-dom';
 
 const App = () => {
   return (
     <>
-      {/* <Movies/> */}
-      <MoviesFunctional/>
+      <BrowserRouter>
+        {/* <Movies/> */}
+        <MoviesFunctional/>
+      </BrowserRouter>
     </>
   );
 }
